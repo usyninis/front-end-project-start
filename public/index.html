@@ -11,23 +11,90 @@
 	<![endif]-->
 	
 	<link rel="stylesheet" href="build/css/common.min.css">
-	
+	<style>
+	.thumb{max-height:100px;max-width:200px;border:1px solid #333}
+	</style>
 </head>
 <body>
 	
 	<div id="example1"></div>
 	<div id="example2"></div>
+	
+	<div id="list-thumbs"></div>
+	
 
 	<div class="dfsdsf">
 		<div class="dfs">
-			fds
+			<input id="file-input" multiple type="file" />
 		</div>
 	</div>
+	
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.2/react.min.js"></script>
 	<script src="build/js/common.min.js"></script>	
 	<script src="build/js/common-react.min.js"></script>	
+	<script>
+	 function handleFileSelect(e) {
+	 
+		var input = e.target;
+		var files = input.files;
+		//console.log( input.files );
+		
+			
+
+		for(var i=0, file; file = files[i] ;i++) {
+		
+		  //var file = input.files[i];
+		 
+		  
+		 
+		  
+		  
+		  if (!file.type.match('image.*')) {
+			console.error('file.type error');
+			continue;
+		  }
+		  
+		   
+		   
+			var reader = new FileReader();
+	
+			reader.onload = function(file) {
+			  
+				//console.log( reader.result );
+				//var dataURL = reader.result;
+				//var img_thumb = document.getElementById('img_thumb');
+				//img_thumb.src = reader.result;
+				//console.log(e.target);
+				//console.log(reader.result);
+				var img = document.createElement('img');
+				//console.log(file.type);
+				//$("#list-thumbs").append('<img class="thumb" src="'+reader.result+'">');
+
+				img.className = "thumb";
+				img.src = this.result;
+				img.title = file.name;
+				//].join(''),
+							
+				document.getElementById('list-thumbs').insertBefore(img, null);
+			  
+			  
+			};
+		  
+		    reader.readAsDataURL(file);
+		  
+		}
+	  
+		  
+		
+		   
+			
+		
+	  }
+	  
+	  document.getElementById('file-input').addEventListener('change', handleFileSelect, false);
+	</script>	
 
 </body>
 </html>
