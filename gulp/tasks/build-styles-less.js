@@ -4,6 +4,7 @@ var less = require('gulp-less');
 var csso = require('gulp-csso');
 
 var paths = require('./../paths');
+var config = require('./../config');
 
 var errorHandler = require('./../errorHandler');
 

@@ -8,6 +8,7 @@ module.exports = {
   DEV_CSS: './dev/css',
   DEV_LESS: './dev/less',
   DEV_JS: './dev/js',
+  DEV_REACT_JS: './dev/react',
   BUILD_CSS: './public/build/css',
   BUILD_JS: './public/build/js',
   //BUILD: 'dist'

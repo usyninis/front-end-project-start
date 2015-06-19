@@ -5,6 +5,7 @@ var gutil = require('gulp-util');
 var del = require('del');
 
 var paths = require('./../paths');
+var config = require('./../config');
 
 
 

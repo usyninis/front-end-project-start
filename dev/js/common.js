@@ -1,15 +1,5 @@
-var MyDiv = require('./react/mydiv');
+$(function() {
 
+	console.log('at code');
 
-React.render(
-  <MyDiv />,
-  document.getElementById("example")
-);
-
-//module.exports = MyDiv;
-
-//
-//sdsddfsdsf
-//dfsdfssdsda
-//
-//dsfdssdf
+});
