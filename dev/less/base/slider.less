@@ -1,0 +1,252 @@
+
+.exp-slider{
+	background-color: @color-blue;
+	position: relative;		
+	min-height: 100%;
+}
+.exp-slider__content{
+	width: 100%;
+	position: relative;
+}
+
+.exp-slider__menu{
+	background: @color-blue-menu;
+	display: none;
+	padding: 1em 0;
+	font-size: 1.2em;
+	color:#fff;
+	font-family: @font-text;
+	@media @mobile{
+		display: block;
+	}
+}
+.exp-slider__menu-icon{
+	float: right;
+	font-size: 4em;
+	font-weight: bold;
+}
+
+.exp-slider__content_main{
+	background-color: @color-blue-dark;
+	padding-top: 100px;
+	padding-bottom: 40px;
+	@media @mobile{
+		padding-bottom: 60px;
+	}
+}
+.exp-slider__content_main:after {
+	content: ' ';
+	position: absolute;
+	left: 0;
+	width: 100%;
+	bottom: -11px;
+	height: 50;
+	background-color: @color-blue-dark;
+	.transform(rotate(2deg));
+}
+.exp-slider__content-inner{
+	width: 92%;
+	max-width: 840px;
+	margin: 0 auto;
+}
+
+.exp-slider__text{
+	text-align: center;
+	color: #fff;
+	font-family: @font-text;
+	font-size: 1.125em;
+	 line-height: 1.2em;
+	@media @mobile{
+		text-align: left;
+		white-space: normal;
+	}
+}
+
+.exp-slider__text_title{
+	margin-bottom: 0.3em;
+	text-transform: uppercase;
+	font-size: 3.125em;
+	font-weight: 600;
+	line-height: 1em;
+}
+
+.exp-slider__text_intro{
+	font-size: 1.5625em;
+	margin-bottom: 1.8em;
+	font-weight: 400;
+}
+
+.exp-slider__text_quote{
+	font-size: 1.5625em;
+	position: relative;
+	font-weight: 500;
+	font-style: italic;
+	margin-bottom: 1.5625em;
+	@media @medium-only{
+		margin: 0 40px;
+	}
+}
+.exp-slider__add{
+	margin-bottom: 30px;
+	.mobile-hide();
+}
+.exp-slider__control{
+	position: absolute;
+	top: 220px;
+	height: 80px;
+	width: 60px;
+	overflow: hidden;
+	@media @mobile{
+		display: none;
+	}
+
+}
+.exp-slider__control_left{
+	left: 0px;
+}
+.exp-slider__control_right{
+	right: 0px;
+}
+.exp-slider__author{
+	margin: 0 auto 40px;
+	text-align: center;
+	
+	position: relative;
+	
+	width: 290px;
+	
+}
+
+.exp-slider__text_quote:before{
+	display: block;
+	position: absolute;
+	left:0;
+	top:-50px;
+	width: 45px;
+	height: 45px;
+	content: ' ';
+	background: transparent url("@{path-img}/sprite.png") no-repeat 0 0;
+}
+.exp-slider__text_quote:after{
+	display: block;
+	position: absolute;
+	right:0;
+	top:-50px;
+	width: 45px;
+	height: 45px;
+	content: ' ';
+	background: transparent url("@{path-img}/sprite.png") no-repeat  0 -45px;
+}
+
+.exp-slider__text-mobile{
+	display: none;
+	margin-bottom: 2em;
+	@media @mobile {
+		display: block;
+	}
+}
+
+.exp-slider__text_author{
+	font-size: 1em;
+	.opacity(0.5);
+}
+
+.exp-slider__nav-dots{
+	padding: 40px 0;
+
+	text-align: center;
+}
+
+.exp-slider__nav-dot{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background-color:@color-blue-dark;
+	margin: 0 5px;
+	border-radius: 5px;
+}
+
+.exp-slider__nav-dot.active{
+	
+	background-color:#fff;
+}
+
+
+.exp-icon{
+	width: 32px;
+	height: 32px;
+	display: inline-block;
+	background: transparent url("@{path-img}/sprite.png");
+
+	&.ei-right{
+		background-position: 18px -34px;
+		  width: 16px;
+		  height: 16px;
+	}
+	&.ei-left{
+		background-position: 18px -18px;
+		  width: 16px;
+		  height: 16px;
+	}
+	&.ei-plus{
+		background-position: 18px 0px;
+		width: 16px;
+		height: 18px;
+	}
+
+}
+/*.exp-rhomb-content:before{
+	position: absolute;
+	height: 0;
+	width: 0;
+	top:0;
+	left:0;
+	border: 54px solid transparent;
+	content: ' ';
+	border-left: 100px solid  @color-blue;
+	border-top: 0;
+	border-right: 100px solid  @color-blue;
+}
+.exp-rhomb-content:after{
+	position: absolute;
+	height: 0;
+	width: 0;
+	top:0;
+	left:0;
+	border: 54px solid transparent;
+	content: ' ';
+	border-left: 100px solid  @color-blue;
+	border-top: 0;
+	border-right: 100px solid  @color-blue;
+}*/
+
+.exp-slider-dsg{
+	position: absolute;
+	width: 100%;
+	height: 100px;
+	overflow: hidden;
+	@media @mobile{
+		background: @color-blue-dark;
+		height: 90px;
+	}
+	& .dsg-left{
+		width: 100%;
+		background: @color-blue-dark;
+		height: 100px;
+		position: absolute;
+		transform: rotate(-4deg);
+		bottom: 10px;
+		transform-origin: left bottom 0;
+  		.mobile-hide();
+	}
+	& .dsg-right{
+		width: 100%;
+		background: @color-blue-dark;;
+		height: 100px;
+		position: absolute;
+		transform:rotate(1.5deg);
+		bottom: 0;
+		transform-origin: right bottom 0;
+		.mobile-hide();
+	}
+}
