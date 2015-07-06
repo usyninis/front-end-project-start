@@ -1,128 +1,100 @@
 <!doctype html>
-<html lang="en">
+<html class="no-js" lang="en">
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Graph Test Task</title>
+	<title>Hello World</title>
 		
 	<!--[if IE]>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>	
 	<![endif]-->
 	
-	
 	<link rel="stylesheet" href="build/css/common.min.css">
-	
-
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700,300,400' rel='stylesheet' type='text/css'>
-
-
+	<style>
+	.thumb{max-height:100px;max-width:200px;border:1px solid #333}
+	</style>
 </head>
 <body>
-	<div class="exp-slider">
+	
+	<div id="example1"></div>
+	<div id="example2"></div>
+	
+	<div id="list-thumbs"></div>
+	
 
-	<div class="exp-slider__content exp-slider__menu">
-	<div class="exp-slider__content-inner">
-		Experience
-		<div class="exp-slider__menu-icon">
-			-
-		</div>
-	</div>
-	</div>
-
-		<div class="exp-slider__content exp-slider__content_main">
-		<div class="exp-slider__content-inner">
-			
-			<div class="exp-slider__text exp-slider__text_title">
-				Experience
-			</div>
-			
-			<div class="exp-slider__text exp-slider__text_intro">
-				This stuff has been specified in components 
-				on commercial and military aircraft for more than 25 years
-			</div>
-			
-			<div class="exp-slider__text">
-				We know the best results come when we partner with manufacturers and use our expertise to help
-				take components and systems from inception to production and to market.
-			</div>
-		</div>
-		</div>
-
-		<div class="exp-slider__content">
-
-			<div class="exp-slider-dsg">
-				<div class="dsg-left"></div>
-				<div class="dsg-right"></div>
-			</div>
-
-			<div class="exp-slider__control exp-slider__control_left js-prev-slide">
-				<div class="exp-rhomb">
-					<div class="exp-rhomb-part"></div>
-					<div class="exp-rhomb-content">
-						<div class="exp-icon ei-left"></div>
-					</div>
-				</div>
-			</div>
-			<div class="exp-slider__control exp-slider__control_right js-next-slide">
-				<div class="exp-rhomb">
-					<div class="exp-rhomb-part"></div>
-					<div class="exp-rhomb-content">
-						<div class="exp-icon ei-right"></div>
-					</div>
-				</div>
-			</div>
-
-			<div id="exp-slider">
-				
-				<div class="exp-slide">
-				<div class="exp-slider__content-inner">
-					<div class="exp-slider__author">
-						<img src="img/author.png" class="exp-slider__author-img" width="290" height="188" alt="author" />
-					</div>
-
-					<div class="exp-slider__text exp-slider__text_quote">
-						Donec sed odio dui. Maecenas faucibus mollis interdum. Sed posuere
-						consectetur est at lobortis. Morbi leo risus, porta ac consectetur ac,
-						vestibulum at eros. Donec sed odio dui.
-					</div>
-
-					<div class="exp-slider__add">
-					<div class="exp-rhomb">
-						<div class="exp-rhomb-part">
-						
-						</div>
-						<div class="exp-rhomb-content">
-							<div class="exp-icon ei-plus"></div>
-						</div>
-					</div>
-					</div>
-
-					<div class="exp-slider__text exp-slider__text-mobile">
-						Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Aenean lacinia bibendum nulla sed consectetur.Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Aenean eu leo quam. Pellentesque ornare
-					</div>
-
-					<div class="exp-slider__text exp-slider__text_author">
-						– John Smith, Commercial Director, Boeing –
-					</div>
-					<!--
-					<div class="exp-slider__nav-dots">
-						<div class="exp-slider__nav-dot"></div>
-						<div class="exp-slider__nav-dot active"></div>
-						<div class="exp-slider__nav-dot"></div>
-						<div class="exp-slider__nav-dot"></div>
-					</div>
-					-->
-				</div>
-				</div>
-
-			</div>
-
+	<div class="dfsdsf">
+		<div class="dfs">
+			<input id="file-input" multiple type="file" />
 		</div>
 	</div>
 	
+	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="slick/slick.js"></script>
-	<script src="build/js/common.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.2/react.min.js"></script>
+	<script src="build/js/common.min.js"></script>	
+	<script src="build/js/common-react.min.js"></script>	
+	<script>
+	 function handleFileSelect(e) {
+	 
+		var input = e.target;
+		var files = input.files;
+		//console.log( input.files );
+		
+			
+
+		for(var i=0, file; file = files[i] ;i++) {
+		
+		  //var file = input.files[i];
+		 
+		  
+		 
+		  
+		  
+		  if (!file.type.match('image.*')) {
+			console.error('file.type error');
+			continue;
+		  }
+		  
+		   
+		   
+			var reader = new FileReader();
+	
+			reader.onload = function(file) {
+			  
+				//console.log( reader.result );
+				//var dataURL = reader.result;
+				//var img_thumb = document.getElementById('img_thumb');
+				//img_thumb.src = reader.result;
+				//console.log(e.target);
+				//console.log(reader.result);
+				var img = document.createElement('img');
+				//console.log(file.type);
+				//$("#list-thumbs").append('<img class="thumb" src="'+reader.result+'">');
+
+				img.className = "thumb";
+				img.src = this.result;
+				img.title = file.name;
+				//].join(''),
+							
+				document.getElementById('list-thumbs').insertBefore(img, null);
+			  
+			  
+			};
+		  
+		    reader.readAsDataURL(file);
+		  
+		}
+	  
+		  
+		
+		   
+			
+		
+	  }
+	  
+	  document.getElementById('file-input').addEventListener('change', handleFileSelect, false);
+	</script>	
+
 </body>
 </html>
