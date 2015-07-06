@@ -7,7 +7,13 @@ gulp.task('default',function(callback) {
     
 	runSequence(
 	  'build-clean',
-	  ['build-scripts', 'build-styles-less', 'build-react-scripts'],
+	  [
+	    'build-images',  
+	    'build-sprite',  
+	    'build-scripts', 
+	    'build-styles-less', 
+	    'build-react-scripts'
+	  ],
 	  'watch',
 	  callback);
 	

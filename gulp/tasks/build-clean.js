@@ -15,6 +15,7 @@ gulp.task('build-clean',function() {
     console.log('build-clean >'+paths.BUILD_JS); 
 	*/
 	del([
+	  paths.BUILD_IMAGES+'/*',
 	  paths.BUILD_CSS+'/*',
 	  paths.BUILD_JS+'/*'
 	], function (err, paths) {
