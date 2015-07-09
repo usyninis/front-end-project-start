@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var spritesmith = require('gulp.spritesmith');
-var imagemin   = require('gulp-imagemin');
+//var imagemin   = require('gulp-imagemin');
 
 var paths = require('./../paths');
 var config = require('./../config');
