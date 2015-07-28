@@ -1,19 +1,26 @@
-
+var cx = require('classnames');
 
 module.exports = React.createClass({
 
   displayName: "Button",
   
-/*   handleClick: function() {
+  getInitialState: function() {
+    return {
+	  checked: true
+	};
+  },
+  
+  handleClick: function() {
     
+	
 	//DemoComponent.changeText("new text");
 	this.props.handleClick();
-	
-  }, */
+	this.setState({checked:!this.state.checked});  
+  },
   
   render: function(){
     return (
-      <button type="button" onClick={this.props.handleClick}>
+      <button type="button" className={cx("button",{checked:this.state.checked})} onClick={this.handleClick}>
        button
       </button>
     )
