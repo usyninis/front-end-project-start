@@ -1,14 +1,14 @@
 var gulp       = require('gulp');
-var gutil = require('gulp-util');
+/*var gutil = require('gulp-util');
 var imageop   = require('gulp-image-optimization');
 
 var paths = require('./../paths');
 var config = require('./../config');
 
 var errorHandler = require('./../errorHandler');
-
+*/
 gulp.task('build-images', function(){
-  var imgBuild = gulp.src([
+/*  var imgBuild = gulp.src([
 	paths.DEV_IMAGES+'/*.png',
 	paths.DEV_IMAGES+'/*.jpg',
 	paths.DEV_IMAGES+'/*.jpeg',
@@ -26,5 +26,5 @@ gulp.task('build-images', function(){
 
   imgBuild
 	.pipe(gulp.dest(paths.BUILD_IMAGES))
-	.on('error', errorHandler);
+	.on('error', errorHandler);*/
 });

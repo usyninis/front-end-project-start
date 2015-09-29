@@ -1,15 +1,15 @@
 var gulp = require('gulp');
-var spritesmith = require('gulp.spritesmith');
+/*var spritesmith = require('gulp.spritesmith');
 //var imagemin   = require('gulp-imagemin');
 
 var paths = require('./../paths');
 var config = require('./../config');
 
 var errorHandler = require('./../errorHandler');
-
+*/
 
 gulp.task('build-sprite', function() {
-    var spriteData = 
+   /* var spriteData = 
         gulp.src(paths.DEV_SPRITE+'/*.png') // путь, откуда берем картинки для спрайта
             .pipe(spritesmith({
                 imgName: 'sprite.png',
@@ -21,5 +21,5 @@ gulp.task('build-sprite', function() {
 		.pipe(gulp.dest(paths.BUILD_SPRITE)); // путь, куда сохраняем картинку
 		
     spriteData.css
-		.pipe(gulp.dest(paths.BUILD_SPRITE)); // путь, куда сохраняем стили
+		.pipe(gulp.dest(paths.BUILD_SPRITE)); // путь, куда сохраняем стили*/
 });

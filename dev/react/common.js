@@ -1,7 +1,8 @@
+require('babel/register');
 //var React = require('react');
 
-var DemoComponent = require('./demo/DemoComponent');
-var Button = require('./demo/Button');
+import DemoComponent from './demo/DemoComponent';
+import DemoButton from './demo/Button';
 
 
 React.render(

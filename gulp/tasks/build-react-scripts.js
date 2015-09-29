@@ -24,7 +24,7 @@ gulp.task('build-react-scripts',function() {
   	.on('error', errorHandler)
 	.pipe(source('common-react.min.js')) 
 	.pipe(buffer())
-	.pipe(uglify())   
+	//.pipe(uglify())   
 	.pipe(gulp.dest(paths.BUILD_JS));
 
 /*   gulp.src('./assets/js/main.jsx')
